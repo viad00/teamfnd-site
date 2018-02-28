@@ -1,0 +1,16 @@
+en:
+  our_description: "We are a group of developers, formed in 2017 by Vladislav Utkin
+  and Artem Gavrilov to work on some projects."
+  our_people: "Our people"
+  vladislav_utkin: "Vladislav Utkin"
+  vladislav_utkin_short_description: "Linux admin, python developer and just a good man"
+  artem_gavrilov: "Artem Gavrilov"
+  artem_gavrilov_short_description: "Lead team developer, CodeForces contest-solver, Delphi-man"
+ru:
+  our_description: "Мы - группа разработчиков, основанная в 2017 году
+  Владиславом Уткиным и Артемом Гавриловым для работы над разными проектами"
+  our_people: "Наша команда"
+  vladislav_utkin: "Владислав Уткин"
+  vladislav_utkin_short_description: "Админ, фулстек немного-разработчик, линуксоид, питонист и просто хороший парень"
+  artem_gavrilov: "Артём Гаврилов"
+  artem_gavrilov_short_description: "Наш главный разработчик и тащер на контестах КФ, дельфист"
