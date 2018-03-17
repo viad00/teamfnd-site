@@ -12,6 +12,11 @@
             p(class="card-text") {{$t('teamfind_description')}}
             b-button(href="https://find.teamfnd.ru" target="_blank") {{$t('project_site')}}
             span https://find.teamfnd.ru
+        b-col(sm="12" md="12" lg="6" xl="6")
+          b-card(title="FasmOnDelphi" class="mb-3")
+            p(class="card-text") {{$t('fasmondelphi_description')}}
+            b-button(href="http://fasmondelphi.teamfnd.ru" target="_blank") {{$t('project_site')}}
+            span http://fasmondelphi.teamfnd.ru
       //
         b-col(sm="12" md="12" lg="6" xl="6")
           b-card(title="Name")

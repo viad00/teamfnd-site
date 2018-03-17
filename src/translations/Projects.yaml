@@ -2,7 +2,9 @@ en:
   project_site: "Project website"
   fasm4delphi_description: "Use FASM assembler in your Delphi or FreePascal code"
   teamfind_description: "A website for searching teams or players in CS:GO"
+  fasmondelphi_description: "A library for using in Delphi FlatAssembler, in contrast to Fasm4Delphi does not depend on operating system and bit type. Connects to the compiler from the command line."
 ru:
   project_site: "Веб-сайт проекта"
   fasm4delphi_description: "Библиотека, реализующая биндинги flat ассемблера для Delphi. Совместима с FreePascal"
   teamfind_description: "Веб-сайт для поиска команды или игроков для игры в CS:GO"
+  fasmondelphi_description: "Библиотека для использования Flat Assembler на Delphi, в отличии от Fasm4Delphi не зависит от оперционной системы и её разрядности. Подключается к компилятору из командной строки."
