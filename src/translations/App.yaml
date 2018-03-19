@@ -3,6 +3,11 @@ en:
   about_us: "About us"
   home: "Home"
   our_projects: "Our projects"
+jp:
+  language: "言語"
+  about_us: "私たちに関しては"
+  home: "メインページ"
+  our_projects: "私たちのプロジェクト"
 ru:
   language: "Язык"
   about_us: "О нас"
