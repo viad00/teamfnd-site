@@ -10,7 +10,7 @@
         b-navbar-nav(class="ml-auto")
           b-nav-item(@click="modalShow = !modalShow") {{$t('contact_us')}}
           b-modal(id="contactus" hide-footer :title="$t('contact_us')" v-model="modalShow")
-            b-form(@sumbit="send")
+            b-form(action="http://localhost:8000/contact.php" method="post")
               b-form-group(id="EmailInputGroup"
                             label="Email address"
                             label-for="EmailInput"
@@ -18,6 +18,7 @@
                 b-form-input(id="EmailInput"
                               type="email"
                               v-model="form.email"
+                              name="email"
                               required
                               placeholder="Enter email")
               b-form-group(id="NameInputGroup"
@@ -26,6 +27,7 @@
                 b-form-input(id="NameInput"
                               type="text"
                               v-model="form.name"
+                              name="name"
                               required
                               placeholder="Enter name")
               b-form-group(id="TextInputGroup"
@@ -33,12 +35,13 @@
                             label-for="TextInput")
                 b-form-textarea(id="TextInput"
                                 v-model="form.text"
+                                name="body"
                                 required
                                 placeholder=""
                                 :rows="3")
-              vue-recaptcha(:sitekey="sitekey" @verify="captchaPass")
+              vue-recaptcha(:sitekey="sitekey" @verify="captchaPass" @expired="captchaFailed")
               p
-              b-button(type="submit" variant="primary" @click.prevent="send") Submit
+              b-button(type="submit" variant="primary" :disabled="!allowsend") Submit
           b-nav-form
             label(for="locale" style="margin: 5px") {{$t('language')}}:
             b-form-select(v-model="locale")
@@ -49,6 +52,7 @@
       router-view
       hr
       footer
+        // TODO: Mailto
         p &copy; 2018 TeamFND
 </template>
 
@@ -63,20 +67,19 @@ export default
       email: ''
       name: ''
       text: ''
-      captcha_challenge: ''
     }
     sitekey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
+    allowsend: false
   watch:
     locale: (val) ->
       this.$root.$i18n.locale = val
       window.localStorage.language = val
   methods:
-    send: (evt) ->
-      # TODO: Check data
-      console.log(JSON.stringify(@form))
-      @modalShow = !@modalShow
     captchaPass: (key) ->
       @form.captcha_challenge = key
+      @allowsend = true
+    captchaFailed: () ->
+      @allowsend = false
   components: { VueRecaptcha }
 </script>
 
