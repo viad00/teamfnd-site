@@ -3,6 +3,7 @@ en:
   about_us: "About us"
   home: "Home"
   our_projects: "Our projects"
+  contact_us: "Contact Us"
 jp:
   language: "言語"
   about_us: "私たちに関しては"
@@ -13,3 +14,4 @@ ru:
   about_us: "О нас"
   home: "Главная"
   our_projects: "Наши проекты"
+  contact_us: "Связаться с нами"
