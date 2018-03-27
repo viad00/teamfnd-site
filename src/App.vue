@@ -10,28 +10,28 @@
         b-navbar-nav(class="ml-auto")
           b-nav-item(@click="modalShow = !modalShow") {{$t('contact_us')}}
           b-modal(id="contactus" hide-footer :title="$t('contact_us')" v-model="modalShow")
-            b-form(action="http://localhost:8000/contact.php" method="post")
+            b-form(action="/contact.php" method="post")
               b-form-group(id="EmailInputGroup"
-                            label="Email address"
+                            :label="$t('email_address')"
                             label-for="EmailInput"
-                            description="We'll never share your email with anyone else.")
+                            :description="$t('email_disclaimer')")
                 b-form-input(id="EmailInput"
                               type="email"
                               v-model="form.email"
                               name="email"
                               required
-                              placeholder="Enter email")
+                              :placeholder="$t('email_placeholder')")
               b-form-group(id="NameInputGroup"
-                            label="Your name:"
+                            :label="$t('your_name')"
                             label-for="NameInput")
                 b-form-input(id="NameInput"
                               type="text"
                               v-model="form.name"
                               name="name"
                               required
-                              placeholder="Enter name")
+                              :placeholder="$t('name_placeholder')")
               b-form-group(id="TextInputGroup"
-                            label="Your Message"
+                            :label="$t('your_message')"
                             label-for="TextInput")
                 b-form-textarea(id="TextInput"
                                 v-model="form.text"
@@ -41,19 +41,18 @@
                                 :rows="3")
               vue-recaptcha(:sitekey="sitekey" @verify="captchaPass" @expired="captchaFailed")
               p
-              b-button(type="submit" variant="primary" :disabled="!allowsend") Submit
+              b-button(type="submit" variant="primary" :disabled="!allowsend") {{$t('submit')}}
           b-nav-form
             label(for="locale" style="margin: 5px") {{$t('language')}}:
             b-form-select(v-model="locale")
               option(value="en") English
-              //option(value="jp") 日本語
+              option(value="jp") 日本語
               option(value="ru") Русский
     #app(class="container body-content")
       router-view
       hr
       footer
-        // TODO: Mailto
-        p &copy; 2018 TeamFND
+        p &copy; 2018 TeamFND <a href="mailto:info@teamfnd.ru">info@teamfnd.ru</a>
 </template>
 
 <script lang="coffeescript">
@@ -68,7 +67,7 @@ export default
       name: ''
       text: ''
     }
-    sitekey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
+    sitekey: '6LcGPU8UAAAAAA0lp61LBl2aTR0k6E_Hf1j4dkHx'
     allowsend: false
   watch:
     locale: (val) ->
