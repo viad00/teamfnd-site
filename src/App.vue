@@ -9,39 +9,6 @@
           b-nav-item(:to="{name:'About'}") {{$t('about_us')}}
         b-navbar-nav(class="ml-auto")
           b-nav-item(@click="modalShow = !modalShow") {{$t('contact_us')}}
-          b-modal(id="contactus" hide-footer :title="$t('contact_us')" v-model="modalShow")
-            b-form(action="/contact.php" method="post")
-              b-form-group(id="EmailInputGroup"
-                            :label="$t('email_address')"
-                            label-for="EmailInput"
-                            :description="$t('email_disclaimer')")
-                b-form-input(id="EmailInput"
-                              type="email"
-                              v-model="form.email"
-                              name="email"
-                              required
-                              :placeholder="$t('email_placeholder')")
-              b-form-group(id="NameInputGroup"
-                            :label="$t('your_name')"
-                            label-for="NameInput")
-                b-form-input(id="NameInput"
-                              type="text"
-                              v-model="form.name"
-                              name="name"
-                              required
-                              :placeholder="$t('name_placeholder')")
-              b-form-group(id="TextInputGroup"
-                            :label="$t('your_message')"
-                            label-for="TextInput")
-                b-form-textarea(id="TextInput"
-                                v-model="form.text"
-                                name="body"
-                                required
-                                placeholder=""
-                                :rows="3")
-              vue-recaptcha(:sitekey="sitekey" @verify="captchaPass" @expired="captchaFailed")
-              p
-              b-button(type="submit" variant="primary" :disabled="!allowsend") {{$t('submit')}}
           b-nav-form
             label(for="locale" style="margin: 5px") {{$t('language')}}:
             b-form-select(v-model="locale")
@@ -53,6 +20,39 @@
       hr
       footer
         p &copy; 2018 TeamFND <a href="mailto:info@teamfnd.ru">info@teamfnd.ru</a>
+      b-modal(id="contactus" hide-footer :title="$t('contact_us')" v-model="modalShow")
+         b-form(action="/contact.php" method="post")
+          b-form-group(id="EmailInputGroup"
+                            :label="$t('email_address')"
+                            label-for="EmailInput"
+                            :description="$t('email_disclaimer')")
+            b-form-input(id="EmailInput"
+                              type="email"
+                              v-model="form.email"
+                              name="email"
+                              required
+                              :placeholder="$t('email_placeholder')")
+          b-form-group(id="NameInputGroup"
+                            :label="$t('your_name')"
+                            label-for="NameInput")
+            b-form-input(id="NameInput"
+                              type="text"
+                              v-model="form.name"
+                              name="name"
+                              required
+                              :placeholder="$t('name_placeholder')")
+          b-form-group(id="TextInputGroup"
+                            :label="$t('your_message')"
+                            label-for="TextInput")
+            b-form-textarea(id="TextInput"
+                                v-model="form.text"
+                                name="body"
+                                required
+                                placeholder=""
+                                :rows="3")
+          vue-recaptcha(:sitekey="sitekey" @verify="captchaPass" @expired="captchaFailed")
+          p
+          b-button(type="submit" variant="primary" :disabled="!allowsend") {{$t('submit')}}
 </template>
 
 <script lang="coffeescript">
@@ -80,6 +80,11 @@ export default
     captchaFailed: () ->
       @allowsend = false
   components: { VueRecaptcha }
+  metaInfo: () ->
+    title: 'App'
+    titleTemplate: '%s - TeamFND'
+    htmlAttrs:
+      lang: this.$root.$i18n.locale
 </script>
 
 <i18n src='@/translations/App.yaml'></i18n>

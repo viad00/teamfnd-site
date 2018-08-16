@@ -36,16 +36,6 @@ const i18n = new VueI18n({
   fallbackLocale: 'en', // fallbackLocale
 })
 
-const PAGE_TITLE = {
-    "Home": "Landing",
-    "About": "About Us",
-    "Projects": "Our projects"
-}
-
-router.afterEach((toRoute, fromRoute) => {
-    window.document.title = PAGE_TITLE[toRoute.name] + ' - TeamFND'
-})
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

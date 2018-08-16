@@ -18,12 +18,14 @@
               li E-mail: vlad@teamfnd.ru
               li Telegram: @viad00
               li VK: <a href="https://vk.com/viad2">vk.com/viad2</a>
-              li Jabber: vlad@teamfnd.ru
+              //li Jabber: vlad@teamfnd.ru
 </template>
 
 <script lang="coffeescript">
 export default
   name: "about"
+  metaInfo:
+    title: 'About Us'
 </script>
 
 <i18n src='@/translations/About.yaml'></i18n>

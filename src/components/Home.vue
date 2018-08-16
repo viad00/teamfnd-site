@@ -7,6 +7,8 @@
 <script lang="coffeescript">
 export default
   name: 'home'
+  metaInfo:
+    title: 'Landing'
 </script>
 
 <i18n src='@/translations/Home.yaml'></i18n>
