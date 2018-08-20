@@ -6,9 +6,10 @@ en:
   documentation: "Documentation"
   latest_version: "Latest version"
   all_downloads: "All downloads"
-  auto: "Auto"
   read_online: "Read online"
   view_on_github: "View on GitHub"
+  link: "link"
+  or: "or"
 
   app_name_fasm4delphi: "Fasm4Delphi"
   description_fasm4delphi: "A simple library for compiling FASM assembly code to Delphi and FreePascal"
@@ -28,6 +29,12 @@ en:
   main_fasmondelphi: "A library for using in Delphi FlatAssembler, in contrast to Fasm4Delphi not depend on operating system and bit type. Connects to the compiler from the command line. Win32 can connect to fasm.dll via Fasm4Delphi. Also, its Api is easier to use."
   github_link_fasmondelphi: "TeamFND/FasmOnDelphi"
 
+  app_name_aglogs: "AGLogs"
+  description_aglogs: "Library of classes to log to different places: to file, to memory, to command-line Windows only for Delphi and FPC."
+  main_aglogs: "Library of classes to log to different places: to file, to memory, to command-line Windows only. Supported Delphi and FPC."
+  keywords_aglogs: "Delphi FPC FreePascal logging commandline-logging memory-logging"
+  github_link_aglogs: "TeamFND/AGLogs"
+
 ru:
   description_word: "Описание:"
   download_word: "Загрузки:"
@@ -36,7 +43,10 @@ ru:
   documentation: "Документация"
   latest_version: "Последняя версия"
   all_downloads: "Все загрузки"
-  auto: "Автоматически"
+  read_online: "Читать онлаин"
+  view_on_github: "Смотреть на GitHub"
+  link: "ссылка"
+  or: "или"
 
   main_fasm4delphi: "Библиотека, реализующая биндинги flat ассемблера для Delphi. Совместима с FreePascal"
   app_name_fasm4delphi: "Fasm4Delphi"
@@ -56,7 +66,6 @@ jp:
   documentation: "ヘルプ"
   latest_version: "最新版"
   all_downloads: "すべてのダウンロード"
-  auto: "オート"
 
   app_name_fasm4delphi: "Fasm4Delphi"
   description_fasm4delphi: "DelphiのFASMのライブラリ"

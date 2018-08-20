@@ -1,14 +1,17 @@
 en:
+  project_page: "Project page"
   project_site: "Project website"
   fasm4delphi_description: "Use FASM assembler in your Delphi or FreePascal code"
   teamfind_description: "A website for searching teams or players in CS:GO"
   fasmondelphi_description: "A library for using in Delphi FlatAssembler, in contrast to Fasm4Delphi does not depend on operating system and bit type. Connects to the compiler from the command line."
+  aglogs_description: "Library of classes to log to different places: to file, to memory, to command-line Windows only for Delphi and FPC."
 jp:
   project_site: "プロジェクトウェブサイト"
   fasm4delphi_description: "DelphiとFreePascalのコドにFlat assemblerをつかうことのためにライブラリです。"
   teamfind_description: "A website for searching teams or players in CS:GO"
   fasmondelphi_description: "DelphiとFreePascalのコドにFlat assemblerをつかうことのために拡張ライブラリです。(Linux/Unix/Win64サポート＋もっと簡単なAPI＋Front-EndとしてFasm4Delphiをあるとをつかいます)"
 ru:
+  project_page: "Страница проекта"
   project_site: "Веб-сайт проекта"
   fasm4delphi_description: "Библиотека, реализующая биндинги flat ассемблера для Delphi. Совместима с FreePascal"
   teamfind_description: "Веб-сайт для поиска команды или игроков для игры в CS:GO"

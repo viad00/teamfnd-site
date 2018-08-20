@@ -16,7 +16,7 @@
     </ul>
     <h2>GitHub</h2>
     <ul>
-    <li>GitHub Link: <a :href="'https://github.com/' + $t('github_link_' + this.$route.params.project_name)" target="_blank">https://github.com/{{$t('github_link_' + this.$route.params.project_name)}}</a> or</li>
+    <li>GitHub {{ $t('link') }}: <a :href="'https://github.com/' + $t('github_link_' + this.$route.params.project_name)" target="_blank">https://github.com/{{$t('github_link_' + this.$route.params.project_name)}}</a> {{ $t('or') }}</li>
     </ul>
     <b-form-input type="text" disabled :value="'git clone https://github.com/' + $t('github_link_' + this.$route.params.project_name) + '.git'"></b-form-input>
     <h2>{{ $t('donate') }}:</h2>

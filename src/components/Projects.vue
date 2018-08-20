@@ -5,7 +5,7 @@
         b-col(sm="12" md="12" lg="6" xl="6")
           b-card(title="Fasm4Delphi" class="mb-3")
             p(class="card-text") {{$t('fasm4delphi_description')}}
-            b-button(:to="{name:'View Project', params: {project_name: 'fasm4delphi'}}") {{$t('project_site')}}
+            b-button(:to="{name:'View Project', params: {project_name: 'fasm4delphi'}}") {{$t('project_page')}}
             //span https://teamfnd.ru/#/viewproject/fasm4delphi
         b-col(sm="12" md="12" lg="6" xl="6")
           b-card(title="TeamFND" class="mb-3")
@@ -15,8 +15,12 @@
         b-col(sm="12" md="12" lg="6" xl="6")
           b-card(title="FasmOnDelphi" class="mb-3")
             p(class="card-text") {{$t('fasmondelphi_description')}}
-            b-button(:to="{name:'View Project', params: {project_name: 'fasmondelphi'}}") {{$t('project_site')}}
+            b-button(:to="{name:'View Project', params: {project_name: 'fasmondelphi'}}") {{$t('project_page')}}
             //span https://teamfnd.ru/#/viewproject/fasmondelphi
+        b-col(sm="12" md="12" lg="6" xl="6")
+          b-card(title="AGLogs" class="mb-3")
+            p(class="card-text") {{$t('aglogs_description')}}
+            b-button(:to="{name:'View Project', params: {project_name: 'aglogs'}}") {{$t('project_page')}} 
       //
         b-col(sm="12" md="12" lg="6" xl="6")
           b-card(title="Name")
