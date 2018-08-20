@@ -18,9 +18,17 @@ export default
   components: { VueMarkdown }
   methods: 
     getMarkdown: () ->
-      Axios.get('https://raw.githubusercontent.com/' + @$t('github_link_' + this.$route.params.project_name) + '/master/DOC_' + this.$root.$i18n.locale.toUpperCase() + '.MD')
+      @getWithCode(this.$root.$i18n.locale)
+    getWithCode: (lang_code) ->
+      Axios.get('https://raw.githubusercontent.com/' + @$t('github_link_' + this.$route.params.project_name) + '/master/DOC_' + lang_code.toUpperCase() + '.MD')
         .then((response) => (this.markdown_data = response.data))
-        .catch((error) => (this.markdown_data = 'Sorry, but there was an error while loading documentation: </br></br>' + error.message))
+        .catch((error) => (@errorReturn(error.message)))
+    errorReturn: (error_msg) ->
+      if @errored
+        @markdown_data = 'Sorry, but there was an error while loading documentation: </br></br>' + error_msg
+      else
+        @errored = true
+        @getWithCode('en')
   created: () ->
     this.getMarkdown()
   watch:
