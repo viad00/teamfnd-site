@@ -15,4 +15,5 @@ ru:
   project_site: "Веб-сайт проекта"
   fasm4delphi_description: "Библиотека, реализующая биндинги flat ассемблера для Delphi. Совместима с FreePascal"
   teamfind_description: "Веб-сайт для поиска команды или игроков для игры в CS:GO"
-  fasmondelphi_description: "Библиотека для использования Flat Assembler на Delphi, в отличии от Fasm4Delphi не зависит от оперционной системы и её разрядности. Подключается к компилятору из командной строки."
+  fasmondelphi_description: "Библиотека для использования Flat Assembler на Delphi, в отличии от Fasm4Delphi не зависит от оперционной системы и её разрядности. Подключается к компилятору из командной строки"
+  aglogs_description: "Библиотека для логгирования информации в память, файл, каммандную строку (только для Windows) для Delphi и FPC"
