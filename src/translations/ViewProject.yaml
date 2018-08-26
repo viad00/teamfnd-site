@@ -58,6 +58,11 @@ ru:
   keywords_fasmondelphi: "FASM Delphi FPC FreePascal library Fasm4Delphi"
   main_fasmondelphi: "Библиотека для использования Flat Assembler на Delphi, в отличии от Fasm4Delphi не зависит от оперционной системы и её разрядности. Подключается к компилятору из командной строки. В win32 может подключить fasm.dll через Fasm4Delphi. Также её Api проще в использовании."
 
+  app_name_aglogs: "AGLogs"
+  description_aglogs: "Библиотека для логгирования информации в память, файл, каммандную строку (только для Windows) для Delphi и FPC"
+  main_aglogs: "Библиотека для логгирования информации в память, файл, каммандную строку (только для Windows). Поддерживаются Delphi и FPC."
+  keywords_aglogs: "Delphi FPC FreePascal логгирование коммандная строка оперативная память"
+
 jp:
   description_word: "説明:"
   download_word: "ダウンロード:"
