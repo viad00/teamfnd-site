@@ -35,6 +35,12 @@ en:
   keywords_aglogs: "Delphi FPC FreePascal logging commandline-logging memory-logging"
   github_link_aglogs: "TeamFND/AGLogs"
 
+  app_name_agpascaltokenizer: "AGPascalTokenizer"
+  description_agpascaltokenizer: "Tokenizer for Pascal code"
+  main_agpascaltokenizer: "Tokenizer for Pascal code"
+  keywords_agpascaltokenizer: "Tokenizer for Pascal code"
+  github_link_agpascaltokenizer: "TeamFND/AGPascalTokenizer"
+
 ru:
   description_word: "Описание:"
   download_word: "Загрузки:"
@@ -62,6 +68,11 @@ ru:
   description_aglogs: "Библиотека для логгирования информации в память, файл, каммандную строку (только для Windows) для Delphi и FPC"
   main_aglogs: "Библиотека для логгирования информации в память, файл, каммандную строку (только для Windows). Поддерживаются Delphi и FPC."
   keywords_aglogs: "Delphi FPC FreePascal логгирование коммандная строка оперативная память"
+
+  app_name_agpascaltokenizer: "AGPascalTokenizer"
+  description_agpascaltokenizer: "Токенайзер для Паскаля"
+  main_agpascaltokenizer: "Токенайзер для Паскаля"
+  keywords_agpascaltokenizer: "Токенайзер для Паскаля"
 
 jp:
   description_word: "説明:"
